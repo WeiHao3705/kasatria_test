@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Kasatria People Table</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+
+	<div id="login-screen">
+		<div class="login-card">
+			<h1>Kasatria People Table</h1>
+			<p>Sign in with Google to view the interactive visualization.</p>
+			<div id="gsi-button"></div>
+			<p id="login-error" class="error hidden"></p>
+		</div>
+	</div>
+
+	<div id="loading-screen" class="hidden">
+		<div class="spinner"></div>
+		<p id="loading-text">Loading data from Google Sheet…</p>
+	</div>
+
+	<div id="app" class="hidden">
+		<div id="container"></div>
+
+		<div id="header">
+			<div id="user-chip">
+				<img id="user-avatar" src="" alt="">
+				<span id="user-name"></span>
+				<button id="signout-btn" type="button">Sign out</button>
+			</div>
+			<div id="legend">
+				<span class="legend-item"><i class="dot red"></i>&lt; $100K</span>
+				<span class="legend-item"><i class="dot orange"></i>$100K – $200K</span>
+				<span class="legend-item"><i class="dot green"></i>&gt; $200K</span>
+			</div>
+		</div>
+
+		<div id="hint">Click a person to zoom in &middot; click empty space to zoom back out</div>
+
+		<div id="menu">
+			<button id="table" class="layout-btn active" type="button">TABLE</button>
+			<button id="sphere" class="layout-btn" type="button">SPHERE</button>
+			<button id="helix" class="layout-btn" type="button">HELIX</button>
+			<button id="grid" class="layout-btn" type="button">GRID</button>
+		</div>
+	</div>
+
+	<script type="importmap">
+	{
+		"imports": {
+			"three": "https://unpkg.com/three@0.169.0/build/three.module.js",
+			"three/addons/": "https://unpkg.com/three@0.169.0/examples/jsm/"
+		}
+	}
+	</script>
+	<script type="module" src="js/main.js"></script>
+</body>
+</html>
