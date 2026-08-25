@@ -48,11 +48,6 @@ Then open `http://localhost:8000`.
   around a shared axis, like DNA.
 - **Grid** — 5 × 4 × 10 volume.
 
-## Interaction
-
-Click a person to fly the camera in close on just that tile; click empty
-space (or the same tile again) to zoom back out.
-
 ## Net worth color coding
 
 - Red: below $100,000
